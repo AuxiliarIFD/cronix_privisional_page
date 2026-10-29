@@ -918,7 +918,7 @@ section[id]{scroll-margin-top:88px}
 (function () {
   // Destino del formulario cuando la página se publique en su propio dominio
   // (endpoint de Formspree, Basin o API propia que reenvíe a ceo@ifdevidence.co). Vacío: modo de copia manual.
-  var FORM_ENDPOINT = "";
+  var FORM_ENDPOINT = "https://api.web3forms.com/submit";
   var CONTACT_EMAIL = "ceo@ifdevidence.co";
   var FREE_MAIL = /@(gmail|googlemail|hotmail|outlook|live|msn|yahoo|ymail|icloud|me|aol|protonmail|proton|zoho|gmx|mail)\.(com|co|es|net|org|mx|ar|cl|pe|ec|com\.co|com\.mx|com\.ar)$/i;
 
@@ -1045,6 +1045,9 @@ section[id]{scroll-margin-top:88px}
     o.declaracion_confidencialidad = document.getElementById("decl2").checked ? "Sí" : "No";
     o.consentimiento = form.consentimiento.checked ? "Sí" : "No";
     o.destinatario = CONTACT_EMAIL;
+    o.access_key = "8b394647-1a4f-4d54-b3da-cce3ae611e77";
+    o.subject = "Nueva solicitud de demostracion - CRONIX";
+    o.replyto = o.correo;
     o.origen = "cronix-sitio";
     o.fecha = new Date().toISOString();
     return o;
